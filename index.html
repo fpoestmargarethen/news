@@ -36,7 +36,7 @@
             background-color: #ffffff;
             color: #0056A3;
         }
-        .video-container {
+        .media-container {
             margin-top: 30px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.9);
@@ -49,6 +49,13 @@
             border: 3px solid #0056A3;
             border-radius: 10px;
         }
+        img {
+            width: 100%;
+            max-width: 800px;
+            border: 3px solid #0056A3;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
         .footer {
             margin-top: 40px;
             padding: 20px;
@@ -59,16 +66,18 @@
     <h1>Willkommen bei der FPÖ St. Margarethen!</h1>
     <p>Hier halten wir euch über aktuelle Themen rund um unsere Region auf dem Laufenden.</p>
     
-    <div class="video-container">
+    <div class="media-container">
         <h2>Unser Vorstellungsvideo</h2>
+        <img src="kandidaten.jpeg" alt="Kandidaten">
         <video controls>
             <source src="vorstellung.mp4" type="video/mp4">
             Dein Browser unterstützt das Video-Tag nicht.
         </video>
     </div>
     
-    <div class="video-container">
+    <div class="media-container">
         <h2>Sicher für Euch!</h2>
+        <img src="sicher.jpeg" alt="Sicherheit">
         <video controls>
             <source src="information_märz.mp4" type="video/mp4">
             Dein Browser unterstützt das Video-Tag nicht.

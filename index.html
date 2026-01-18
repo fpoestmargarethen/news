@@ -50,6 +50,13 @@
             display: inline-block;
         }
 
+        video {
+            width: 100%;
+            max-width: 800px;
+            border: 3px solid #0056A3;
+            border-radius: 10px;
+        }
+
         canvas {
             width: 100%;
             max-width: 800px;
@@ -73,6 +80,15 @@
 </head>
 
 <body>
+
+    <!-- VIDEO GANZ OBEN -->
+    <div class="media-container">
+        <video controls>
+            <source src="neujahr.mp4" type="video/mp4">
+            Dein Browser unterstützt dieses Video nicht.
+        </video>
+        <p>Das war der Neujahrsempfang in Klagenfurt</p>
+    </div>
 
     <h1>Willkommen bei der FPÖ St. Margarethen!</h1>
     <p>Hier halten wir euch über aktuelle Themen rund um unsere Region auf dem Laufenden.</p>

@@ -1,146 +1,152 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPÖ St. Margarethen - News</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPÖ St. Margarethen - News</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background: linear-gradient(to bottom, #ffffff, #008000);
-            color: #0056A3;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, #ffffff, #008000);
+    color: #0056A3;
+}
 
-        h1, h2, p {
-            color: #0056A3;
-        }
+h1, h2, p {
+    color: #0056A3;
+}
 
-        p {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            font-size: 20px;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 25px;
-            border: 2px solid #0056A3;
-            border-radius: 5px;
-            background-color: #0056A3;
-            transition: 0.3s;
-        }
+a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border: 2px solid #0056A3;
+    border-radius: 5px;
+    background-color: #0056A3;
+    transition: 0.3s;
+}
 
-        a:hover {
-            background-color: #ffffff;
-            color: #0056A3;
-        }
+a:hover {
+    background-color: #ffffff;
+    color: #0056A3;
+}
 
-        .media-container {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            display: inline-block;
-        }
+.media-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    display: inline-block;
+}
 
-        video {
-            width: 100%;
-            max-width: 800px;
-            border: 3px solid #0056A3;
-            border-radius: 10px;
-        }
+video {
+    width: 100%;
+    max-width: 800px;
+    border: 3px solid #0056A3;
+    border-radius: 10px;
+}
 
-        img {
-            width: 100%;
-            max-width: 800px;
-            border: 3px solid #0056A3;
-            border-radius: 10px;
-        }
+img {
+    width: 100%;
+    max-width: 800px;
+    border: 3px solid #0056A3;
+    border-radius: 10px;
+}
 
-        canvas {
-            width: 100%;
-            max-width: 800px;
-            margin-bottom: 20px;
-            border: 3px solid #0056A3;
-            border-radius: 10px;
-        }
+canvas {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    border: 3px solid #0056A3;
+    border-radius: 10px;
+}
 
-        .footer {
-            margin-top: 40px;
-            padding: 20px;
-        }
-    </style>
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
-    <!-- ÜBERSCHRIFT BLEIBT GANZ OBEN -->
-    <h1>Willkommen bei der FPÖ St. Margarethen!</h1>
-    <p>Hier halten wir euch über aktuelle Themen rund um unsere Region auf dem Laufenden.</p>
+<!-- ÜBERSCHRIFT -->
+<h1>Willkommen bei der FPÖ St. Margarethen!</h1>
 
-    <!-- VIDEO UNTER DER ÜBERSCHRIFT -->
-    <div class="media-container">
-        <video controls>
-            <source src="neujahr.mp4" type="video/mp4">
-            Dein Browser unterstützt dieses Video nicht.
-        </video>
-        <p>Das war der Neujahrsempfang in Klagenfurt</p>
-    </div>
+<p>Hier halten wir euch über aktuelle Themen rund um unsere Region auf dem Laufenden.</p>
 
-    <!-- BILD -->
-    <div class="media-container">
-        <img src="deregulierung.png" alt="Deregulierung">
-    </div>
+<!-- TEAMSUCHE BILD -->
+<div class="media-container">
+    <img src="teamsuche.jpeg" alt="Teamsuche">
+</div>
 
-    <!-- PDF -->
-    <div id="pdf-viewer" class="media-container"></div>
+<!-- VIDEO -->
+<div class="media-container">
+    <video controls>
+        <source src="neujahr.mp4" type="video/mp4">
+        Dein Browser unterstützt dieses Video nicht.
+    </video>
+    <p>Das war der Neujahrsempfang in Klagenfurt</p>
+</div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-        <a href="https://www.fpoe-stmk.at/partei/murtal" target="_blank">
-            Zur FPÖ-Murtal-Website
-        </a>
-    </div>
+<!-- BILD -->
+<div class="media-container">
+    <img src="deregulierung.png" alt="Deregulierung">
+</div>
 
-    <!-- PDF.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
-    <script>
-        const url = 'steirer1025.pdf';
-        const container = document.getElementById('pdf-viewer');
-        const pdfjsLib = window['pdfjsLib'];
+<!-- PDF -->
+<div id="pdf-viewer" class="media-container"></div>
 
-        pdfjsLib.GlobalWorkerOptions.workerSrc =
-            'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+<!-- FOOTER -->
+<div class="footer">
+<a href="https://www.fpoe-stmk.at/partei/murtal" target="_blank">
+Zur FPÖ-Murtal-Website
+</a>
+</div>
 
-        pdfjsLib.getDocument(url).promise.then(pdf => {
-            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-                pdf.getPage(pageNum).then(page => {
-                    const scale = 1.5;
-                    const viewport = page.getViewport({ scale });
+<!-- PDF.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+<script>
+const url = 'steirer1025.pdf';
+const container = document.getElementById('pdf-viewer');
+const pdfjsLib = window['pdfjsLib'];
 
-                    const canvas = document.createElement('canvas');
-                    const context = canvas.getContext('2d');
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
 
-                    canvas.width = viewport.width;
-                    canvas.height = viewport.height;
+pdfjsLib.getDocument(url).promise.then(pdf => {
+    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        pdf.getPage(pageNum).then(page => {
+            const scale = 1.5;
+            const viewport = page.getViewport({ scale });
 
-                    container.appendChild(canvas);
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
 
-                    page.render({
-                        canvasContext: context,
-                        viewport: viewport
-                    });
-                });
-            }
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+
+            container.appendChild(canvas);
+
+            page.render({
+                canvasContext: context,
+                viewport: viewport
+            });
         });
-    </script>
+    }
+});
+</script>
 
 </body>
 </html>
